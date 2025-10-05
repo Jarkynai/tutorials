@@ -1,5 +1,4 @@
 import streamlit as st
-import seaborn as sns
 import pandas as pd
 data = pd.read_html('https://mineconom.gov.kg/ru/direct/158/312')
 dataform = pd.concat(data)
@@ -35,6 +34,7 @@ filtered2.to_csv('by_status.csv')
 filtered3 = dataform_renamed.groupby('Сфера').count()
 st.write('со сферам',filtered3)
 filtered3.to_csv('by_field.csv')
+
 
 
 
